@@ -92,6 +92,7 @@ def create_wpa_supplicant(ssid, wifi_key):
     temp_conf_file.write('\n')
     temp_conf_file.write('network={\n')
     temp_conf_file.write('	ssid="' + ssid + '"\n')
+    temp_conf_file.write('	scan_ssid=1\n')
 
     if wifi_key == '':
         temp_conf_file.write('	key_mgmt=NONE\n')
